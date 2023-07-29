@@ -122,6 +122,7 @@ class Main{
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
+Output 
 hi
 This is a sample text for testing purpose
 We hope you will like this GUI word counter app in java
