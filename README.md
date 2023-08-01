@@ -127,3 +127,52 @@ hi
 This is a sample text for testing purpose
 We hope you will like this GUI word counter app in java
 Thank you
+import java.io.*;
+public class Main{
+    public static void displayBalance(int balance)
+    {
+        System.out.println("Current Balance:"+ balance);
+        System.out.println();
+    }
+    public static int amountWithdrawing(int balance,int withdrawAmount)
+    {
+        System.out.println("Withdraw Operation:");
+        System.out.println("Withdrawing Amount:"+withdrawAmount);
+        if(balance>=withdrawAmount){
+            balance=balance-withdrawAmount;
+            System.out.println("Please collect your money and collect the card");
+            displayBalance(balance);
+        }
+        else{
+            System.out.println("Sorry!Insufficient Funds");
+            System.out.println();
+        }
+        return balance;
+    }
+    public static int amountDepositing(int balance,int depositeAmount)
+    {
+        System.out.println("Deposite Operation:");
+        System.out.println("Depositing Amount:"+depositeAmount);
+        balance=balance+depositeAmount;
+        System.out.println("Your Money ha been successfully deposited");
+        displayBalance(balance);
+        return balance;
+    }
+    public static void main(String args[])
+    {
+        int balance=10000;
+        int withdrawAmount=5000;
+        int depositAmount=2000;
+        displayBalance(balance);
+        balance = amountWithdrawing(balance,withdrawAmount);
+        balance = amountDepositing(balance,depositAmount);
+
+    }
+}
+Deposite Operation:
+Depositing Amount:2000
+Your Money ha been successfully deposited
+Current Balance:7000
+
+
+Process finished with exit code 0
